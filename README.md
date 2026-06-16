@@ -1,10 +1,10 @@
-# ☕ Coffee Bliss - Membership Card App
+# Coffee Bliss - Membership Card App
 
 Aplikasi Android modern untuk sistem kartu member digital Coffee Bliss.
 
 ---
 
-## 📱 Fitur Aplikasi
+## Fitur Aplikasi
 
 | Fitur | Deskripsi |
 |-------|-----------|
@@ -18,7 +18,7 @@ Aplikasi Android modern untuk sistem kartu member digital Coffee Bliss.
 
 ---
 
-## 🏗️ Arsitektur & Teknologi
+## Arsitektur & Teknologi
 
 ```
 Tech Stack:
@@ -51,7 +51,7 @@ com.coffeebliss/
 
 ---
 
-## 🗄️ Database Design (Room)
+## Database Design 
 
 ### Tabel `members`
 | Kolom | Tipe | Keterangan |
@@ -110,7 +110,7 @@ Contoh: Rp150.000 ÷ Rp10.000 = 15 poin
 
 ---
 
-## 🖼️ User Flow
+## User Flow
 
 ```
 [Splash] → [Login / Register] → [Home Dashboard]
@@ -125,69 +125,16 @@ Contoh: Rp150.000 ÷ Rp10.000 = 15 poin
 
 ---
 
-## 🚀 Cara Menjalankan
-
-### Prasyarat
+## Cara Menjalankan
 - Android Studio Ladybug (2024.2.1) atau lebih baru
 - JDK 11+
 - Android SDK API 35
 - Emulator / Device API 26+
 
 ### Langkah
-```bash
 # 1. Clone / buka project di Android Studio
 # 2. Sync Gradle (File → Sync Project with Gradle Files)
 # 3. Run → Run 'app' (Shift+F10)
-```
 
-### Dependensi Utama (app/build.gradle.kts)
-```kotlin
-// Navigation Compose
-implementation("androidx.navigation:navigation-compose:2.8.5")
 
-// Room Database
-implementation("androidx.room:room-runtime:2.6.1")
-implementation("androidx.room:room-ktx:2.6.1")
-ksp("androidx.room:room-compiler:2.6.1")
 
-// ViewModel
-implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
-implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.7")
-
-// QR Code (ZXing)
-implementation("com.google.zxing:core:3.5.3")
-
-// Material Icons Extended
-implementation("androidx.compose.material:material-icons-extended:1.7.6")
-```
-
----
-
-## 📱 Screenshot Flow
-
-```
-Splash → Logo animasi Coffee Bliss
-Login  → Input email member
-Daftar → Input nama, email, no HP
-Home   → Dashboard dengan poin & menu utama
-Kartu  → Digital card + QR Code
-Transaksi → List riwayat + tombol tambah
-Tambah Transaksi → Input nominal + preview poin
-Reward → List reward + tombol tukar
-Profil → Info akun + logout
-```
-
----
-
-## 👨‍💻 Catatan Pengembang
-
-- Aplikasi menggunakan **Repository Pattern** sebagai single source of truth
-- **Flow** dari Room digunakan untuk reactive data updates
-- **Jetpack Compose** dengan **Material 3** untuk UI modern
-- QR Code dibangkitkan menggunakan library **ZXing** dari nomor member
-- Tidak menggunakan ViewModel class terpisah untuk menyederhanakan (repository dipanggil langsung dari Composable via `collectAsState`)
-- Untuk production, tambahkan ViewModel layer yang proper untuk better separation of concerns
-
----
-
-*Coffee Bliss Membership Card App — "Good Coffee, Great Experience" ☕*
