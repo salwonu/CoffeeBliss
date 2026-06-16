@@ -131,10 +131,5 @@ Contoh: Rp150.000 ÷ Rp10.000 = 15 poin
 - Android SDK API 35
 - Emulator / Device API 26+
 
-### Langkah
-# 1. Clone / buka project di Android Studio
-# 2. Sync Gradle (File → Sync Project with Gradle Files)
-# 3. Run → Run 'app' (Shift+F10)
-
 
 
